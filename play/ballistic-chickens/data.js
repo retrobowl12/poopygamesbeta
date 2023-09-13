@@ -146,7 +146,7 @@ const OFFERS = [
   {
     name: 'Launch Velocity',
     desc: 'Shove some more gunpowder into the cannon.',
-    cost: 70,
+    cost: 15,
     gain: 10,
     expo: 1.6,
   },
@@ -160,7 +160,7 @@ const OFFERS = [
   {
     name: 'Fuel Surplus',
     desc: 'Make more room in your fuel tank that doesn\'t really exist anyway.',
-    cost: 70,
+    cost: 20,
     gain: 50,
     expo: 1.5,
   },
