@@ -1,4 +1,42 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    var inactivityTimeout = 5 * 60 * 1000; // 20 minutes in milliseconds
+    var redirectUrl = 'https://www.google.com';
+
+    var activityTimer;
+
+    function resetTimer() {
+      clearTimeout(activityTimer);
+      activityTimer = setTimeout(redirect, inactivityTimeout);
+    }
+
+    function redirect() {
+      window.location.href = redirectUrl;
+    }
+
+    // Reset the timer on any user activity
+    document.addEventListener('mousemove', resetTimer);
+    document.addEventListener('keydown', resetTimer);
+
+    // Check for tab visibility change
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        redirect();
+      } else {
+        resetTimer();
+      }
+    });
+
+    // Initial timer setup
+    resetTimer();
+  </script>
+</head>
+<body>
+  <!DOCTYPE html>
 <html>
 <head>
    <script>
@@ -1018,5 +1056,7 @@ function openSubdomain(event) {
 			document.querySelector("style").disabled = true;
 		}
 	</script>
+</body>
+</html>
 </body>
 </html>
