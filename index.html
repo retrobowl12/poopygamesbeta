@@ -617,13 +617,11 @@ function openSubdomain(event) {
   });
 }
 </script>
+ <a id="randomGameLink" class="link" href="#" onclick="redirectRandomGame(event)"><span class="bar"></span><img src="./icons/rand.webp"><b>Random Game</b><span class="badge"><i class="fa-solid fa-user"></i> RECOMMENDED</span></a>
 
-            <a id="randomGameLink" class="link" href="#" onclick="redirectRandomGame(event)"><span class="bar"></span><img src="./icons/rand.webp"><b>Random Game</b><span class="badge"><i class="fa-solid fa-user"></i> RECOMMENDED</span></a>
-
-<script>
   function redirectRandomGame(event) {
     event.preventDefault();
-
+<script>
     // Array of game URLs
     var gameUrls = [
       "https://poopy-games1.netlify.app/play/basketball-stars/",
@@ -658,7 +656,7 @@ function openSubdomain(event) {
 	"https://poopy-games1.netlify.app/play/evolution/"
 	  
     ];
-
+<script>
     // Check if 'visitedGames' cookie exists
     var visitedGames = getCookie('visitedGames');
     if (visitedGames && visitedGames.length === gameUrls.length) {
