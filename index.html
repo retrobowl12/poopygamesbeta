@@ -421,7 +421,67 @@ h6{
       opacity: 1;
     }
   </style>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Game Picker</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      background-color: #1C1C1C;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Karla', sans-serif;
+    }
 
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: #292929;
+      color: #E6E6E6;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    button::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+      z-index: 1;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    button:hover {
+      background-color: #3d3d3d;
+    }
+
+    button:hover::before {
+      opacity: 1;
+    }
+  </style>
+
+
+
+
+        <div id="links" class="animated fadeInLeft delay-1s games">
+            <div class="game_title"><input placeholder="Search" id="search" class="search" onkeyup="search_it()" type="search"><select id="tags" class="button" onclick="search_it()"><option value="all">All Farts</option><option value="pop">Popular</option><option value="two">Two Player</option><option value="stream">Streaming (Broken)</option><option value="bad">Bad Farts</option></select></div>
+            <h2 class="animated jello game_title">All farts:</h2>
+            
+            <!DOCTYPE html>
 <html>
 <head>
   <style>
@@ -557,11 +617,13 @@ function openSubdomain(event) {
   });
 }
 </script>
- <a id="randomGameLink" class="link" href="#" onclick="redirectRandomGame(event)"><span class="bar"></span><img src="./icons/rand.webp"><b>Random Game</b><span class="badge"><i class="fa-solid fa-user"></i> RECOMMENDED</span></a>
 
+            <a id="randomGameLink" class="link" href="#" onclick="redirectRandomGame(event)"><span class="bar"></span><img src="./icons/rand.webp"><b>Random Game</b><span class="badge"><i class="fa-solid fa-user"></i> RECOMMENDED</span></a>
+
+<script>
   function redirectRandomGame(event) {
     event.preventDefault();
-<script>
+
     // Array of game URLs
     var gameUrls = [
       "https://poopy-games1.netlify.app/play/basketball-stars/",
@@ -596,7 +658,7 @@ function openSubdomain(event) {
 	"https://poopy-games1.netlify.app/play/evolution/"
 	  
     ];
-<script>
+
     // Check if 'visitedGames' cookie exists
     var visitedGames = getCookie('visitedGames');
     if (visitedGames && visitedGames.length === gameUrls.length) {
@@ -633,8 +695,7 @@ function openSubdomain(event) {
             
             <a id="Feature Request Form" class="link" onclick="window.location = 'https://forms.gle/ztERQ4wkuM42Z3Kd6';" target="_blank"><span class="bar"></span><img src="/icons/forms.jpeg"><b>Game Request</b><span class="badge"><i class="fa-solid fa-user"></i> RECOMMENDED</span></a>
             <a id="Basketball Stars" class="link" href="./play/basketball-stars/" target="_blank"><span class="bar"></span><img src="./icons/BAS.webp"><b>Basketball Stars</b><span class="badge"><i class="fa-solid fa-user"></i> RECOMMENDED</span></a>
-		<a id="troll-platformer" class="link" href="./play/troll-platformer" target="_blank"><span class="bar"></span><img src="./icons/troll.webp"><b>Troll Platformer</b><span class="badge"><i class="fa fa-star"></i> NEW</span></a>
-		<a id="Monkey-Mart" class="link" href="./play/monkey-mart" target="_blank"><span class="bar"></span><img src="./icons/monkey.webp"><b>Monkey Mart</b><span class="badge"><i class="fa-solid fa-user"></i> RECOMMENDED</span></a>
+	<a id="Monkey-Mart" class="link" href="./play/monkey-mart" target="_blank"><span class="bar"></span><img src="./icons/monkey.webp"><b>Monkey Mart</b><span class="badge"><i class="fa-solid fa-user"></i> RECOMMENDED</span></a>
         <a id="Ages of Conflict" class="link" href="./play/ages-of-conflict/" target="_blank"><span class="bar"></span><img src="./icons/ages-of-conflict.webp"><b>Ages of Conflict</b><span class="badge"><i class="fa-solid fa-user"></i> RECOMMENDED</span></a>
             <a id="House-of-hazards" class="link" href="./404" target="_blank"><span class="bar"></span><img src="./icons/houseofhazards.webp"><b>House of Hazards</b><span class="badge"><i class="fa-solid fa-user"></i> RECOMMENDED</span></a>
             <a id="10-minutes" class="link" href="./play/10-minutes-till-dawn/" target="_blank"><span class="bar"></span><img src="./icons/10m.webp"><b>10 Minutes Till Dawn</b><span class="badge"><i class="fa-solid fa-user"></i> RECOMMENDED</span></a>
