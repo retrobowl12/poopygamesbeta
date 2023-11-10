@@ -1,10 +1,37 @@
-<title>Google Chat</title>
-<link rel="icon" href="https://play-lh.googleusercontent.com/cF_oWC9Io_I9smEBhjhUHkOO6vX5wMbZJgFpGny4MkMMtz25iIJEh2wASdbbEN7jseAx">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Chat</title>
+    <link rel="icon" href="https://play-lh.googleusercontent.com/cF_oWC9Io_I9smEBhjhUHkOO6vX5wMbZJgFpGny4MkMMtz25iIJEh2wASdbbEN7jseAx">
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+</head>
+<body>
 
 <widgetbot
     server="1109923341130801175"
     channel="1109923380062343258"
-    width="1325"
-    height="650"
+    id="widgetbot-container"
 ></widgetbot>
-<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+
+<script>
+    function setWidgetSize() {
+        var widgetContainer = document.getElementById('widgetbot-container');
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+        // Set the widget width and height to match the screen size
+        widgetContainer.setAttribute('width', screenWidth.toString());
+        widgetContainer.setAttribute('height', screenHeight.toString());
+    }
+
+    // Call the function initially
+    setWidgetSize();
+
+    // Update the widget size when the window is resized
+    window.addEventListener('resize', setWidgetSize);
+</script>
+
+</body>
+</html>
