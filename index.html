@@ -1,8 +1,75 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Classroom</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .ad-bar {
+            display: none; /* Initially hide the ad bar */
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            animation: slideIn 0.5s ease-out; /* Slide in animation */
+        }
+
+        .close-button {
+            cursor: pointer;
+            color: #fff;
+            font-size: 18px;
+            float: right;
+            margin-right: 10px;
+        }
+
+        .ad-content {
+            /* Add your ad content styles here */
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6770307678562060"
+     crossorigin="anonymous"></script>
+<!-- bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6770307678562060"
+     data-ad-slot="6389851788"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <!-- Ad Bar -->
+    <div class="ad-bar" id="adBar">
+        <span class="ad-content">Your Ad Content Goes Here</span>
+        <span class="close-button" onclick="closeAd()">X</span>
+    </div>
+
+   <!DOCTYPE html>
 <html>
 <head>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6770307678562060"
-     crossorigin="anonymous"></script>
    <script>
   
 </script>
@@ -1091,3 +1158,31 @@ function openSubdomain(event) {
 </div>
 </body>
 </html>
+
+    <script>
+        // Function to close the ad bar
+        function closeAd() {
+            document.getElementById('adBar').style.animation = 'none'; // Disable animation
+            document.getElementById('adBar').style.display = 'none';
+            
+            // Set a timeout to enable animation and reopen the ad bar after 15 seconds
+            setTimeout(function() {
+                document.getElementById('adBar').style.animation = 'slideIn 0.5s ease-out';
+                document.getElementById('adBar').style.display = 'block';
+            }, 5000); // 15 seconds
+        }
+
+        // Automatically open the ad bar when the page is loaded
+        window.onload = function() {
+            document.getElementById('adBar').style.display = 'block';
+            
+            // Set a timeout to automatically close the ad bar after 15 seconds
+            setTimeout(function() {
+                document.getElementById('adBar').style.display = 'none';
+            }, 15000); // 15 seconds
+        };
+    </script>
+</body>
+</html>
+
+
