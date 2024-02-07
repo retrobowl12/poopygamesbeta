@@ -4,7 +4,7 @@
 var itemCounter = 0;
 var fps = 15;
 
-var money = 99999999999;
+var money = 10;
 var currentCase = "case2";
 var acceptMoneyPerClick = 0.1;
 
@@ -17,15 +17,15 @@ var acceptMoneyPerClick = 0.1;
 
 
 //sorting: by money, rarity
-var popup = false;
+var popup = true;
 
 var inventory = {};
 var jackpotInventory = {};
 
-var inventoryMax = 10000000;
+var inventoryMax = 50;
 var inventoryCurrent = 0;
 
-var keyPrice = 0;
+var keyPrice = 2.50;
 
 var caseDiscount = 0;
 var keyDiscount = 0;
@@ -164,7 +164,7 @@ var cases = {
     milspec: {
       weap1: {
         name: "MP7 | Skulls",
-        price: 999999999.99,
+        price: 0.78,
         img: "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6ryFA957ODDZDFO_-O6nYeDg8j4MqnWkyUC7ZYp07iT94j3jVXsqkE-Y2qhJYKcJwA_aA7ZrFC6wLvqgcDt78ud1zI97Xw9NqWl"
       },
       weap2: {
