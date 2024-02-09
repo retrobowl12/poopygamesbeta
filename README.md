@@ -23,4 +23,4 @@
 
 <h2>Join the Fun!</h2>
 
-<p>Experience the excitement of Poopy Games and explore our extensive collection of thrilling games. Visit us  <a href="https://poopy-games.netlify.app/">Here</a> and join the fun today!</p>
+<p>Experience the excitement of Poopy Games and explore our extensive collection of thrilling games. Visit us  <a href="https://lizzyben.github.io/poopygamesbeta/">Here</a> and join the fun today!</p>
