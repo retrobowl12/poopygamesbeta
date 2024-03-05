@@ -591,37 +591,6 @@ h6{
       document.body.removeChild(dummyElement);
     }
   </script>
-</body>
-</html>
-<a id="Discord" class="link" href="./discordblocked" target="_blank" onclick="openSubdomain(event)">
-  <span class="bar"></span>
-  <img src="/icons/discord.wepg>
-  <b>Discord unblocked</b>
-  <span class="badge"><i class="fa fa-cog fa-fw"></i> FUNCTION</span>
-</a>
-
-<script>
-function openSubdomain(event) {
-  event.preventDefault();
-
-  var subdomainUrl = '/chat';
-  var subdomainWindow = window.open(subdomainUrl, '_blank');
-
-  subdomainWindow.addEventListener('DOMContentLoaded', function () {
-    var widgetbotElement = subdomainWindow.document.createElement('widgetbot');
-    widgetbotElement.setAttribute('server', '1109923341130801175');
-    widgetbotElement.setAttribute('channel', '1109923380062343258');
-    widgetbotElement.setAttribute('width', '800');
-    widgetbotElement.setAttribute('height', '600');
-
-    var widgetbotScript = subdomainWindow.document.createElement('script');
-    widgetbotScript.src = 'https://cdn.jsdelivr.net/npm/@widgetbot/html-embed';
-
-    subdomainWindow.document.body.appendChild(widgetbotElement);
-    subdomainWindow.document.body.appendChild(widgetbotScript);
-  });
-}
-</script>
 
             <a id="randomGameLink" class="link" href="#" onclick="redirectRandomGame(event)"><span class="bar"></span><img src="./icons/rand.webp"><b>Random Game</b><span class="badge"><i class="fa-solid fa-user"></i> RECOMMENDED</span></a>
 
