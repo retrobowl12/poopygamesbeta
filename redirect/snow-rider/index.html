@@ -2,6 +2,136 @@
 <html>
 <head>
 <style>
+ @keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    overflow: hidden;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 11s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+    left: 13%;
+    width: 104px;
+    height: 104px;
+    bottom: -104px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 44%;
+    width: 100px;
+    height: 100px;
+    bottom: -100px;
+    animation-delay: 1s;
+}
+.background li:nth-child(2) {
+    left: 60%;
+    width: 127px;
+    height: 127px;
+    bottom: -127px;
+    animation-delay: 5s;
+}
+.background li:nth-child(3) {
+    left: 32%;
+    width: 146px;
+    height: 146px;
+    bottom: -146px;
+    animation-delay: 1s;
+}
+.background li:nth-child(4) {
+    left: 1%;
+    width: 161px;
+    height: 161px;
+    bottom: -161px;
+    animation-delay: 9s;
+}
+.background li:nth-child(5) {
+    left: 35%;
+    width: 196px;
+    height: 196px;
+    bottom: -196px;
+    animation-delay: 24s;
+}
+.background li:nth-child(6) {
+    left: 64%;
+    width: 141px;
+    height: 141px;
+    bottom: -141px;
+    animation-delay: 10s;
+}
+.background li:nth-child(7) {
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    bottom: -100px;
+    animation-delay: 30s;
+}
+.background li:nth-child(8) {
+    left: 86%;
+    width: 179px;
+    height: 179px;
+    bottom: -179px;
+    animation-delay: 38s;
+}
+.background li:nth-child(9) {
+    left: 6%;
+    width: 195px;
+    height: 195px;
+    bottom: -195px;
+    animation-delay: 22s;
+}
+.background li:nth-child(10) {
+    left: 23%;
+    width: 167px;
+    height: 167px;
+    bottom: -167px;
+    animation-delay: 24s;
+}
+.background li:nth-child(11) {
+    left: 37%;
+    width: 131px;
+    height: 131px;
+    bottom: -131px;
+    animation-delay: 51s;
+}
+.background li:nth-child(12) {
+    left: 50%;
+    width: 194px;
+    height: 194px;
+    bottom: -194px;
+    animation-delay: 19s;
+}
+</style>
+<style>
 html,
 body {
     margin: 0;
@@ -84,6 +214,21 @@ body {
 </style>
 </head>
 <body>
+    <ul class="background">
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+</ul>
 <div class="button-container">
     <a href="/play/snow-rider"><button class="glow-on-hover" type="button">Snow Rider</button></a>
     <a href="/play/snow-rider-new"><button class="glow-on-hover" type="button">Snow Rider New</button></a>
